@@ -1,0 +1,12 @@
+<?php
+
+$this->partial('/layouts/partials/mainMenu');
+
+if (array_key_exists('message', $_SESSION)) {
+    echo '<h4>', $_SESSION['message'], '</h4>';
+    unset($_SESSION['message']);
+}
+
+require_once $view;
+
+?>

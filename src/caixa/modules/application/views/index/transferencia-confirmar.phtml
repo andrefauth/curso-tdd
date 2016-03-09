@@ -1,0 +1,27 @@
+<h2>Confirmação de transferência</h2>
+
+<table>
+    <tr>
+        <td>DEBITADO</td>
+        <td>CREDITADO</td>
+    </tr>
+    <tr>
+        <td><?= $_SESSION['nome_cliente'] ?></td>
+        <td><?= $contaDestino['nome_cliente'] ?></td>
+    </tr>
+    <tr>
+        <td>Conta: <?= $_SESSION['numero_conta'] ?></td>
+        <td>Conta: <?= $contaDestino['numero_conta'] ?></td>
+    </tr>
+    <tr>
+        <td>Saldo atual: <?= $formatarMoeda($saldoAtual) ?></td>
+    </tr>
+    <tr>
+        <td>Transferência: <?= $formatarMoeda($valorTransferir) ?></td>
+    </tr>
+    <tr>
+        <td>Saldo após transferência: <?= $formatarMoeda($saldoAtual - $valorTransferir) ?></td>
+    </tr>
+</table>
+<br>
+<a href="<?= $this->url('transferencia.index.index') ?>">Cancelar</a> | <a href="<?= $this->url('transferencia.index.efetuar', ['valor' => $valorTransferir, 'conta' => $contaDestino['numero_conta']]) ?>">Continuar</a>

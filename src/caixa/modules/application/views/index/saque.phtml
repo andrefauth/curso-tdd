@@ -1,0 +1,11 @@
+<h2>Saque</h2>
+
+<p>
+    <strong>Cliente:</strong>
+    <?= $_SESSION['nome_cliente'] ?>
+</p>
+
+<form action="<?= $this->url('saque.index.efetuar') ?>" method="post">
+    Valor: <input type="text" name="valor-saque" id="valor-saque">
+    <input type="submit" value="Sacar">
+</form>

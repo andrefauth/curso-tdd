@@ -1,0 +1,12 @@
+<h2>Transferência</h2>
+
+<p>
+    <strong>Cliente:</strong>
+    <?= $_SESSION['nome_cliente'] ?>
+</p>
+
+<form action="<?= $this->url('transferencia.index.confirmar') ?>" method="post">
+    Valor: <input type="text" name="valor-transferir" id="valor-transferir">
+    Conta: <input type="text" name="numero-conta" id="numero-conta">
+    <input type="submit" value="Transferir">
+</form>

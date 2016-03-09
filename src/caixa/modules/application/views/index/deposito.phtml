@@ -1,0 +1,11 @@
+<h2>Depósito</h2>
+
+<p>
+    <strong>Cliente:</strong>
+    <?= $_SESSION['nome_cliente'] ?>
+</p>
+
+<form action="<?= $this->url('deposito.index.efetuar') ?>" method="post">
+    Valor: <input type="text" name="valor-deposito" id="valor-deposito">
+    <input type="submit" value="Depositar">
+</form>

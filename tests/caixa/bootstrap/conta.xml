@@ -1,0 +1,23 @@
+<dataset>
+    <table name="conta">
+        <column>id</column>
+        <column>numero_conta</column>
+        <column>senha</column>
+        <column>nome_cliente</column>
+        <column>saldo</column>
+        <row>
+            <value>100</value>
+            <value>12345</value>
+            <value>12345</value>
+            <value>Teste 1</value>
+            <value>1000.00</value>
+        </row>
+        <row>
+            <value>101</value>
+            <value>123</value>
+            <value>123</value>
+            <value>Teste 2</value>
+            <value>1500.00</value>
+        </row>
+    </table>
+</dataset>

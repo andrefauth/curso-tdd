@@ -1,0 +1,4 @@
+/vendor/
+.phpintel/
+coverage-html/
+vagrant/.vagrant
