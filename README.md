@@ -1,55 +1,27 @@
 # Curso TDD.
 
-## Ambiente de desenvolvimento do projeto
+### Requisitos
 
-### Instalação
-
-#### Requisitos
-
-- php 5.6x
-- xdebug
-- Apache2
-- MySQL/MariaDB
-- PHPMyAdmin
-
-#### Instalar o composer
+Vagrant e Virtualbox
 
 ```sh
-https://getcomposer.org/download/
+$ git clone https://github.com/agenciasys/curso-tdd.git
+$ cd curso-tdd/vagrant
+$ vagrant box add workshop_tdd https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
+$ vagrant up
 ```
 
-#### Clonar o repositório e executar o composer
+### Executando os testes:
 
 ```sh
-git clone git@bitbucket.org:diogocavilha/curso-tdd.git
-cd curso-tdd
-composer install
+$ cd curso-tdd/vagrant
+$ vagrant ssh
+$ cd /www/curso-tdd
+$ ./vendor/bin/phpunit
 ```
 
-#### Importar o banco de dados.
+Htdocs
+- localhost:8080
 
-- Acessar o PHPMyAdmin
-- Criar o banco de dados `curso_tdd`
-- Importar o arquivo `curso-tdd/docs/curso_tdd.sql`
-
-#### Executar os testes
-
-```sh
-cd curso-tdd
-./vendor/bin/phpunit --colors tests/
-
-```
-
-## Ambiente de desenvolvimento do curso
-
-### Criar o projeto
-
-```sh
-composer create-project piano/mvc curso-tdd dev-project
-```
-
-### Executar os testes
-
-```sh
-./vendor/bin/phpunit --colors tests/modules/application/models/CaixaTest.php
-```
+Projeto
+- localhost:8989
